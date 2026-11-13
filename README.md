@@ -49,7 +49,7 @@ safra-citizentech/
 
 ## 👥 1. Identificação da Equipe e da Solução
 
-| Integrante |
+| INTEGRANTES |
 | :--- |
 | **Pedro Henrique De Souza Santiago** |
 | **Paulo Ricardo Silva De Oliveira** |
