@@ -1,0 +1,88 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "SAFRA CitizenTech — REST API Contract",
+    "version": "1.0.0",
+    "description": "Contrato OpenAPI 3.0 para integração entre o Frontend Multiplataforma SAFRA e o Backend Java 21 + Spring Boot 3."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/api/v1",
+      "description": "Servidor Local Spring Boot"
+    }
+  ],
+  "paths": {
+    "/producers/{id}": {
+      "put": {
+        "summary": "Atualiza cadastro do produtor rural e aceite LGPD",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Produtor atualizado com sucesso" }
+        }
+      }
+    },
+    "/farms": {
+      "post": {
+        "summary": "Registra propriedade rural e vínculo SICAR/CAR",
+        "responses": {
+          "201": { "description": "Propriedade registrada com sucesso" }
+        }
+      }
+    },
+    "/plots": {
+      "post": {
+        "summary": "Cadastra novo talhão georreferenciado com índice NDVI",
+        "responses": {
+          "201": { "description": "Talhão cadastrado com sucesso" }
+        }
+      }
+    },
+    "/plots/{id}/alert-preferences": {
+      "patch": {
+        "summary": "Atualiza preferências de alertas por talhão",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Preferências atualizadas" }
+        }
+      }
+    },
+    "/management/spraying-schedules": {
+      "post": {
+        "summary": "Agenda manejo/pulverização sustentável e atualiza Score Agro",
+        "responses": {
+          "201": { "description": "Agendamento registrado" }
+        }
+      }
+    },
+    "/community/fire-alerts": {
+      "post": {
+        "summary": "Dispara alerta comunitário de incêndio (INPE + Defesa Civil)",
+        "responses": {
+          "201": { "description": "Alerta comunitário enviado" }
+        }
+      }
+    },
+    "/credit/proposals": {
+      "post": {
+        "summary": "Envia proposta de crédito rural subsidiado (Pronaf / BCB Sicor)",
+        "responses": {
+          "201": { "description": "Proposta submetida à instituição financeira" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+name: SAFRA CitizenTech CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop, 'feature/**']
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  ci-build-and-test:
+    name: Integração Contínua (Build, Typecheck & Testes Automatizados)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 20 LTS
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Instalar dependências
+        run: npm ci
+
+      - name:Executar cenários de teste automatizados (Vitest)
+        run: npm test
+
+      - name: Compilar bundle de produção (TypeScript + Vite)
+        run: npm run build
+
+      - name: Upload do artefato de build
+        uses: actions/upload-artifact@v4
+        with:
+          name: safra-frontend-dist
+          path: dist/
+
+  cd-deploy-cloud:
+    name: Entrega Contínua (Deploy Cloud Staging / Produção)
+    needs: ci-build-and-test
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+    steps:
+      - name: Download do artefato validado
+        uses: actions/download-artifact@v4
+        with:
+          name: safra-frontend-dist
+          path: dist/
+
+      - name: Publicação no ambiente Cloud
+        run: echo "Artefato SAFRA validado e pronto para publicação em Cloud após aprovação."

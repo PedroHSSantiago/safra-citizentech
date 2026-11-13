@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: safra-citizentech-api
+
+  # Configuração MySQL 8+ (Padrão)
+  datasource:
+    url: jdbc:mysql://localhost:3306/safra_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=America/Sao_Paulo
+    username: root
+    password: ${DB_PASSWORD:root}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Para Oracle Database (FIAP), descomente abaixo:
+  # datasource:
+  #   url: jdbc:oracle:thin:@oracle.fiap.com.br:1521:ORCL
+  #   username: ${ORACLE_USER:rm562997}
+  #   password: ${ORACLE_PASSWORD}
+  #   driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+safra:
+  cors:
+    allowed-origins: "http://localhost:5173,http://127.0.0.1:5173"
