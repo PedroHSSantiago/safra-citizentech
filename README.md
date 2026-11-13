@@ -51,11 +51,11 @@ safra-citizentech/
 
 | Integrante | RM |
 | :--- | :--- |
-| **Pedro Henrique De Souza Santiago** | RM562997 |
-| **Paulo Ricardo Silva De Oliveira** | RM564600 |
-| **Caroline Bonifácio Gomes da Silva** | RM564873 |
-| **Adriano Guarezi De Souza** | RM563196 |
-| **Pedro Joaquim Garceis Paes** | RM565674 |
+| **Pedro Henrique De Souza Santiago** |
+| **Paulo Ricardo Silva De Oliveira** |
+| **Caroline Bonifácio Gomes da Silva** |
+| **Adriano Guarezi De Souza** |
+| **Pedro Joaquim Garceis Paes** |
 
 - **Nome da Solução:** **SAFRA** (*Sistema de Resiliência Climática e Crédito Agrícola*)
 - **Protótipo e Design no Figma:** 35 telas interativas (`tela-01` a `tela-35`) divididas em 6 módulos integrados.
