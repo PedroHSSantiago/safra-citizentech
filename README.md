@@ -49,8 +49,8 @@ safra-citizentech/
 
 ## 👥 1. Identificação da Equipe e da Solução
 
-| Integrante | RM |
-| :--- | :--- |
+| Integrante |
+| :--- |
 | **Pedro Henrique De Souza Santiago** |
 | **Paulo Ricardo Silva De Oliveira** |
 | **Caroline Bonifácio Gomes da Silva** |
