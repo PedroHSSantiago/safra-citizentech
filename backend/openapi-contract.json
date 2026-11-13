@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "http://localhost:8080/api/v1",
-      "description": "Servidor Local Spring Boot"
+      "url": "http://safra/api/v1",
+      "description": "Servidor API SAFRA (Spring Boot)"
     }
   ],
   "paths": {

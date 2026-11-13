@@ -13,7 +13,7 @@ import {
 
 export const API_BASE_URL =
   (typeof import.meta !== 'undefined' && (import.meta as unknown as { env?: Record<string, string> }).env?.VITE_API_BASE_URL) ||
-  'http://localhost:8080/api/v1';
+  'http://safra/api/v1';
 
 const STORAGE_KEYS = {
   STATE: 'safra_citizentech_state_v1',

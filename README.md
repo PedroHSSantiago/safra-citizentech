@@ -205,4 +205,4 @@ npm test
 npm run dev
 ```
 
-Para conectar ao Backend Java/Spring Boot, basta definir a variável `VITE_API_BASE_URL=http://localhost:8080/api/v1` em um arquivo `.env` (o esquema completo do banco MySQL/Oracle está em [`docs/BACKEND_API_AND_DATABASE.sql`](docs/BACKEND_API_AND_DATABASE.sql)).
+Para conectar ao Backend Java/Spring Boot, basta definir a variável `VITE_API_BASE_URL=http://safra/api/v1` em um arquivo `.env` (o esquema completo do banco MySQL/Oracle está em [`docs/BACKEND_API_AND_DATABASE.sql`](docs/BACKEND_API_AND_DATABASE.sql)).

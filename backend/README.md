@@ -30,7 +30,7 @@ backend/
 └── openapi-contract.json                 # Especificação OpenAPI 3.0.3 dos endpoints
 ```
 
-## Endpoints Esperados pelo Frontend (`VITE_API_BASE_URL=http://localhost:8080/api/v1`)
+## Endpoints Esperados pelo Frontend (`VITE_API_BASE_URL=http://safra/api/v1`)
 
 | Método | Endpoint | Payload (Tipo TS em `src/types/models.ts`) | Tabela Relacional (`database/schema.sql`) |
 | :--- | :--- | :--- | :--- |
@@ -48,6 +48,6 @@ backend/
 2. Inicie a aplicação Spring Boot na porta `8080`.
 3. Na raiz do projeto, copie `.env.example` para `.env` e garanta:
    ```env
-   VITE_API_BASE_URL=http://localhost:8080/api/v1
+   VITE_API_BASE_URL=http://safra/api/v1
    ```
 4. No painel **CitizenTech & Backend Inspector** do frontend, clique em **"Sincronizar Fila com Backend"** para despachar em lote todas as operações registradas em modo Offline.
